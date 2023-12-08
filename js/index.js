@@ -12,14 +12,14 @@ const swiper = new Swiper(".swiper", {
     320: {
       slidesPerView: 1,
       spaceBetween: 10,
-      loop: true,
+      loop: false,
     },
 
     // when window width is >= 480px
     480: {
       slidesPerView: 1,
       spaceBetween: 10,
-      loop: true,
+      loop: false,
     },
     // when window width is >= 640px
     640: {
