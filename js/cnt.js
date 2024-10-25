@@ -33,7 +33,6 @@ sendBtn.addEventListener("click", function (e) {
         
       })
       .then(function (response) {
-        console.log(message);
         sendBtn.style.display = "none";
         successDiv.style.display = "flex";
       });
