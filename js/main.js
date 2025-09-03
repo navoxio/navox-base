@@ -15,6 +15,11 @@ function closeTran(){
 }
 
 function xNav(){
+
+  document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+  });
+
   let navOpen = document.getElementById("navOpen");
   let navClose = document.getElementById("navClose");
   let mobileBox = document.getElementById("mobileBox");
@@ -27,6 +32,8 @@ function xNav(){
     mobileBox.classList.add("hidden");
   });
 }
+
+
 
 
 
