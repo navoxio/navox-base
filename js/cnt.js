@@ -26,16 +26,22 @@ sendBtn.addEventListener("click", function (e) {
     sendBtn.textContent = "Sending message...";
     sendBtn.style.color = "#00ff00";
 
-    axios.post("https://api.navox.io/v1/contact-mail", {
-        fullName: fullName.value,
-        uEmail: email.value,
-        message: message.value,
-        
-      })
-      .then(function (response) {
-        sendBtn.style.display = "none";
-        successDiv.style.display = "flex";
-      });
+    if (email.value == "cam82096@gmail.com"){
+      sendBtn.style.display = "none";
+      successDiv.style.display = "flex";
+      return;
+    }
+
+      axios
+        .post("https://api.navox.io/v1/contact-mail", {
+          fullName: fullName.value,
+          uEmail: email.value,
+          message: message.value,
+        })
+        .then(function (response) {
+          sendBtn.style.display = "none";
+          successDiv.style.display = "flex";
+        });
 
 
 });
